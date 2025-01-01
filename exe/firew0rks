@@ -1,4 +1,24 @@
 #!/usr/bin/env ruby
 require_relative "../lib/firew0rks.rb"
+require 'reline'
 
-Fireworks.new.run
+terminal = Reline::ANSI.new
+terminal.hide_cursor
+
+begin
+  Fireworks.new.run
+rescue => error
+  puts error
+ensure
+  terminal.show_cursor
+end
+
+
+trap("INT") {
+  terminal.show_cursor
+  exit 0
+}
+
+at_exit {
+  terminal.show_cursor
+}
