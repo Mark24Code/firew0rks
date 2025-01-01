@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative "../lib/firew0rks.rb"
+
+Fireworks.new.run
