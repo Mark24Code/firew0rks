@@ -5,6 +5,14 @@ require 'reline'
 terminal = Reline::ANSI.new
 terminal.hide_cursor
 
+trap("INT") {
+  terminal.show_cursor
+  puts ""
+  puts "Bye."
+  exit 0
+}
+
+
 begin
   Fireworks.new.run
 rescue => error
@@ -12,13 +20,3 @@ rescue => error
 ensure
   terminal.show_cursor
 end
-
-
-trap("INT") {
-  terminal.show_cursor
-  exit 0
-}
-
-at_exit {
-  terminal.show_cursor
-}
