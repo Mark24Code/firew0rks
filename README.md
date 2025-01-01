@@ -19,7 +19,7 @@ Play fireworks text art animations in your terminal!
 `Ctrl + C`
 
 ## Acknowledgments
-This project is a Ruby version of [text_art_animations](https://github.com/rvizzz/text_art_animations) by rvizzz. Thank you for the inspiration and the amazing ASCII art animations!
+This project is a Ruby version of [text_art_animations](https://github.com/rvizzz/text_art_animations) by [rvizzz](https://github.com/rvizzz). Thank you for the inspiration and the amazing ASCII art animations!
 
 ## Contributing
 
