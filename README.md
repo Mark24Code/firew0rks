@@ -2,17 +2,19 @@
 
 Play fireworks text art animations in your terminal!
 
+![fireworks_show](./fireworks_show.gif)
+
 ## Installation
 
-`gem install firew0rks`
+`$ gem install firew0rks`
 
 ## Usage
 
-1) run program
+1) Run program
 
-`firew0rks`
+`$ firew0rks`
 
-2) quit
+2) Quit
 
 `Ctrl + C`
 
