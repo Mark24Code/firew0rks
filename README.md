@@ -2,7 +2,7 @@
 
 Play fireworks text art animations in your terminal!
 
-![fireworks_show](./fireworks_show.gif)
+![fireworks_show](./sample/fireworks_show.gif)
 
 ## Installation
 
