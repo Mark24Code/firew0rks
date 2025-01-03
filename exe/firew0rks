@@ -1,22 +1,31 @@
 #!/usr/bin/env ruby
-require_relative "../lib/firew0rks.rb"
-require 'reline'
+require_relative "../lib/firew0rks"
+require_relative "../lib/firew0rks/terminal"
 
-terminal = Reline::ANSI.new
-terminal.hide_cursor
+def setup
+  Terminal.open_buffer
+  Terminal.hide_cursor
+  Terminal.clear_screen
+end
+
+def clean_up
+  Terminal.close_buffer
+  Terminal.clear_screen
+  Terminal.show_cursor
+end
 
 trap("INT") {
-  terminal.show_cursor
+  clean_up
   puts ""
   puts "Bye."
   exit 0
 }
 
-
 begin
+  setup
   Fireworks.new.run
 rescue => error
   puts error
 ensure
-  terminal.show_cursor
+  clean_up
 end

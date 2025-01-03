@@ -3,6 +3,7 @@ require "io/console"
 require_relative "firew0rks/version"
 require_relative "firew0rks/frame"
 require_relative "firew0rks/error"
+require_relative "firew0rks/terminal"
 
 
 class Fireworks
@@ -14,7 +15,7 @@ class Fireworks
 
 
   def clear_screen
-    $stdout.clear_screen
+    Terminal.clear_buffer
   end
 
   def init_screen
@@ -27,7 +28,7 @@ class Fireworks
         if !@first_frame
           $stdout.print @backspace_adjust
         end
-
+        clear_screen
         $stdout.print content
         @first_frame = false
         sleep(0.05)
